@@ -9,21 +9,43 @@
   <title>Frontend Mentor | Password generator app</title>
 </head>
 <body>
+  <main class="main_container">
+    <h1>Password Generator</h1>
+    <section class="card_top">
+      <output id="password">P4$5W0rD!</output>
+      <button><img src="./assets/images/icon-copy.svg" alt="" aria-label="copiar contraseña"></button>
+      
+    </section>
+    <section class="card_bottom">
+      <div class="range_container">
+        <div class="character">
+          <h3>Character Length</h3>
+          <span id="rangeValue">10</span>
+        </div>
+      <input type="range" name="range" id="inpuRange">
+      </div>
+      <div class="container_checkbox">
+        <label for="upperCase"><input type="checkbox" id="upperCase"> Include Uppercase Letters</label>
+        <label for="lowerCase"><input type="checkbox" id="lowerCase">Include Lowercase Letters</label>
+        <label for="numbers"><input type="checkbox" id="numbers"> Include Numbers</label>
+        <label for="symbols"><input type="checkbox" id="symbols"> Include Symbols</label>
+      </div>
+      <div class="strength">
+        <h2>Strength</h2>
+        <div class="indicator">
+          <p id="textIndicator">MEDIUM</p>
+          <div class="bars">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div>
+      <button id="generate">Generate <img src="./assets/images/icon-arrow-right.svg" alt=""></button>
 
-  Password Generator
-
-  P4$5W0rD!
-
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
+    </section>
+  </main>
 
 </body>
 </html>
