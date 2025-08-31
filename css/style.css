@@ -1,0 +1,238 @@
+@font-face {
+    font-family: "Jet Brains Mono";
+    src: url(../assets/fonts/static/JetBrainsMono-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+:root{
+    --color-bg: hsl(248, 15%, 11%);
+    --color-card: hsl(248, 10%, 15%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray: hsl(251, 9%, 53%);
+    --color-green: hsl(127, 100%, 82%);
+    --color-red: hsl(0, 91%, 63%);
+    --color-orange: hsl(13, 95%, 66%);
+    --color-yellow: hsl(42, 91%, 68%);
+}
+
+html {
+    font-family: "Jet Brains Mono";
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--color-bg);
+    /* height: 100%; */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    gap: 1em;
+    max-width: 400px;
+}
+
+.title_card {
+    font-size: 1.5em;
+    color: var(--color-gray);
+}
+
+.card_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 2em;
+    background-color: var(--color-card);
+    color: var(--color-white);
+    padding: .5em;
+}
+
+.button_copy {
+    background-color: transparent;
+    border: none;
+}
+
+.card_bottom {
+    background-color: var(--color-card);
+    padding: 1em;
+    font-size: 1.2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.character {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-white);
+    align-items: center;
+}
+
+.rangeV {
+    color: var(--color-green);
+    font-size: 1.5em;
+}
+
+.input_range {
+    width: 100%;
+    margin-top: 1em;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: transparent;
+    }
+    
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: var(--color-bg);
+}
+
+input[type="range"]::-moz-range-track {
+    height: 8px;
+    background: var(--color-bg);
+}
+    
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-top: -8px;
+    background-color: var(--color-white);
+}
+
+input[type="range"]::-moz-range-thumb {
+    
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-top: -8px;
+    background-color: var(--color-white);
+}
+
+
+
+.container_checkbox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    gap: 1em;
+}
+
+.check {
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.check input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.check .custom {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-white);
+    display: inline-block;
+    background-position: center;
+}
+
+.check input[type="checkbox"]:checked + .custom {
+    background-image: url(../assets/images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-color: var(--color-green);
+    border: none;
+}
+
+
+.container_strength {
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: .9em .5em;
+    font-size: 1em;
+}
+
+.strTitle {
+    color: var(--color-gray);
+    letter-spacing: .01em;
+    text-transform: uppercase;
+}
+
+ .txtIndicator {
+    color: var(--color-white);
+    margin-right: .5em;
+}
+
+.indicator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bar {
+    border: 2px solid var(--color-white);   
+    background-color: var(--color-bg);
+    padding: .1em;
+    margin: 0 .1em;
+    
+}
+
+.btn_generate {
+    font-family: "Jet Brains Mono";
+    font-weight: bold;
+    background-color: var(--color-green);
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    text-transform: uppercase;
+    padding: 1.2em;
+    font-size: 1em;
+}
+
+.btn_generate img {
+    height: 1em;
+}
+
+@media(min-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .main_container {
+        max-width: 650px;
+        width: 100%;
+    }
+}
+
+@media(min-width: 1080px) {
+    
+}
