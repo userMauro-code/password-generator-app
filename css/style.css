@@ -145,7 +145,6 @@ input[type="range"]::-moz-range-thumb {
 .check input[type="checkbox"] {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
 }
 
 .check .custom {
@@ -234,5 +233,35 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media(min-width: 1080px) {
-    
+    .button_copy:hover {
+       cursor: pointer;
+       filter: brightness(0) saturate(100%) invert(1); 
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+    border: 1px solid var(--color-green);
+    background-color: var(--color-bg);
+    cursor: pointer;
+}
+
+    .check {
+        cursor: pointer;
+    }
+
+    input:hover + .custom{
+    border: 1px solid var(--color-green);
+    cursor: pointer;
+}
+
+.btn_generate:hover {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-green);
+    cursor: pointer;
+    color: var(--color-green);
+}
+
+.btn_generate:hover img{
+    filter: invert(84%) sepia(30%) saturate(500%) hue-rotate(80deg) brightness(105%) contrast(95%);
+    /* fill: var(--color-green); */
+}
 }
