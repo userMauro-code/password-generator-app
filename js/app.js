@@ -25,21 +25,34 @@ updateRange();
 
 // ----------checkboxs-----------
 
-
-checkBoxes.forEach(function(boxes) {
+btnGenerate.addEventListener('click', () => {
     let inSelect = "";
     
-   if (boxes.checked) {
-        if (boxes.id === "upperCase") {
-            inSelect + bloqueUpperCase;
-        }else if(boxes.id === "lowerCase"){
-            inSelect + bloqueLowerCase;
-        }else if(boxes.id === "numbers"){
-            inSelect + bloqueNumber;
-        }else if(boxes.id === "symbols"){
-            inSelect + symbols;
+    checkBoxes.forEach(function(boxes) {
+        if (boxes.checked === true) {
+            if (boxes.id === "upperCase") {
+                inSelect = inSelect += bloqueUpperCase;
+                // console.log(inSelect)
+            }else if(boxes.id === "lowerCase"){
+                inSelect = inSelect += bloqueLowerCase;
+                //    console.log(inSelect)
+            }else if(boxes.id === "numbers"){
+                inSelect = inSelect += bloqueNumber;
+                // console.log(inSelect)
+            }else if(boxes.id === "symbols"){
+                inSelect = inSelect += bloqueSymbol;
+            }
         }
-   }
-   console.log(inSelect)
+    });
+    let newPassword = "";
+    let longitud = inputRange.value;
+    
+    for (let i=0; i < longitud; i++) {
+        let caracter = Math.floor( Math.random() * inSelect.length) ;
+        caracter = inSelect[caracter];
+        newPassword = newPassword + caracter;  
+    };
+    
+    password.textContent = newPassword;
 });
 
